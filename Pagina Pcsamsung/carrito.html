@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <link href="carrito.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/pngegg.png"/>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="menu logo-nav">
+                <a href="index.html" class="logo">PCSAMSUNG</a>
+                <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
+                
+            <ul>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="servecios.html">Servecios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacte.html">Contacte</a></li>
+                <li class="car"><a href="carrito.html" >
+                  <svg class="bi bi-cart3" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg></a>
+                </li>
+                <a class="login" href="registro.html"><img class="login" src="img/loginnn.png" alt="login"></a>
+            </ul>
+            <script src="script-inici.js"></script>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container-carrito">
+              
+                  <h2>Realizar Compra</h2>
+                  <form id="procesar-pago" action="#" method="POST">
+                      <div class="contenido titulo">
+                          <label for="cliente" class="">Cliente :</label>
+                          <input type="text" class="form-control" id="cliente" name="cliente" placeholder="Ingrese su nombre" onkeypress="return sololetras(event)" onpaste="return false" required>
+                      </div>
+                      <div class="contenido titulo">
+                          <label for="email" class="">Correo :</label>
+                          <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo" required>
+                      </div>
+
+                      <div id="carrito" class="contenido">
+                          <table class="tabla" id="lista-compra">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Imagen</th>
+                                      <th scope="col">Nombre</th>
+                                      <th scope="col">Precio</th>
+                                      <th scope="col">Cantidad</th>
+                                      <th scope="col">Sub Total</th>
+                                      <th scope="col">Eliminar</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+
+                              </tbody>
+                              <tr>
+                                  <th colspan="4" scope="col" class="">SUB TOTAL :</th>
+                                  <th scope="col">
+                                      <p id="subtotal"></p>
+                                  </th>
+                              </tr>
+                              <tr>
+                                  <th colspan="4" scope="col" class="">IGV :</th>
+                                  <th scope="col">
+                                      <p id="igv"></p>
+                                  </th>
+                              </tr>
+                              <tr>
+                                  <th colspan="4" scope="col" class="">TOTAL :</th>
+                                  <th scope="col">
+                                    <input type="text" id="total" name="monto_total" readonly>
+                                  </th>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <div class="" id="loaders">
+                          <img id="cargando" src="assets/img/cargando.gif" width="220">
+                      </div>
+
+                      <div class="botones-envio">
+                              <a href="productos.html" class="button" id="volver">Seguir comprando</a>
+                              <input type="submit" class="button" id="procesar-compra" onclick="validarCorreo(form.correo.value)"value="Realizar compra">
+                      </div>
+                  </form>
+
+      </div>
+  </main>
+
+
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>Sobre Nosotros</h2>
+        <div class="content">
+          <p>
+            PCSamsung es una tienda especializada en reparaciones de móviles y ordenadores que se ha establecido como un referente en el mercado local. Con una dedicación incansable a la excelencia y un enfoque centrado en el cliente, PCSamsung se ha ganado la confianza de la comunidad ofreciendo servicios de alta calidad y soluciones técnicas innovadoras.
+          </p>
+          <div class="social">
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+            <a href="#"><span class="fab fa-youtube"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="center box">
+        <h2>DIRECCIÓN</h2>
+        <div class="content">
+          <div class="place">
+            <div class="aw">
+              <span class="fas fa-map-marker-alt"></span>
+            </div>
+            <div class="aw1">
+              <span class="text">Olesa de Montserrat, Barcelona</span>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="aw">
+              <span class="fas fa-phone-alt"></span>
+            </div>
+            <div class="aw1">
+              <span class="text">+34 631 763 762</span>
+            </div>
+          </div>
+          <div class="email1">
+            <div class="aw">
+              <span class="fas fa-envelope"></span>
+            </div>
+            <div class="aw1">
+              <span class="text">pcsamsung@gmail.com</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="right box">
+        <h2>Contacto</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Correo Electronico *</div>
+              <input type="email" required>
+            </div>
+            <div class="msg">
+              <div class="text">Menssage *</div>
+              <textarea rows="2" cols="25" required></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <center>
+        <span class="credit">Creado Por <a href="inici.html">PcSamsung </a> | </span>
+        <span class="far fa-copyright"></span><span> 2023 Reservados todos los derechos.</span>
+      </center>
+    </div>
+  </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script  src="assets/js/scripts.js"></script>
+    <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/pedido.js"></script>
+    <script src="assets/js/compra.js"></script>
+
+</body>
+</html>
